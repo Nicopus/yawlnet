@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+
+<plugin>
+
+  <!-- sub menu for all MDSU tutorials -->
+  <extension 
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            locationURI="popup:org.eclipse.ui.popup.any?after=additions">
+         <menu
+               id="dk.dtu.compute.se.mdsu.tutorials.menu"
+               label="MDSU Tutorials">
+         </menu>
+      </menuContribution>
+   </extension>
+   
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated petrinet -->
+      <package
+            uri="http://se.compute.dtu.dk/mdsu/petrinet"
+            class="dk.dtu.compute.se.mdsu.petrinet.PetrinetPackage"
+            genModel="model/petrinet.genmodel"/>
+   </extension>
+
+</plugin>
